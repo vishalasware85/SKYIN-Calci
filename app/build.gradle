@@ -1,0 +1,89 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.skyncalci"
+        minSdk 21
+        targetSdk 32
+        versionCode 7
+        versionName "1.7"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation project(path: ':floating_bubble')
+    implementation files('libs/MathView-release.aar')
+    implementation files('libs/symja_android_library-full-release.aar')
+    implementation 'com.android.volley:volley:1.2.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.0-beta1'
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.0'
+
+    implementation 'io.github.kobakei:ratethisapp:1.2.0'
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
+    //for buttonBounce Animation
+    implementation 'hari.bounceview:bounceview:0.2.0'
+
+    implementation 'com.github.mukeshsolanki:MarkdownView-Android:1.0.4'
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+    implementation 'com.simplecityapps:recyclerview-fastscroll:1.0.18'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.4'
+
+    //for razorpay gateway
+    implementation 'com.razorpay:checkout:1.6.25'
+
+    //for bt sheet
+    implementation 'com.github.andrefrsousa:SuperBottomSheet:1.3.0'
+
+    //for firebase
+    implementation platform('com.google.firebase:firebase-bom:30.2.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation ("com.google.firebase:firebase-auth"){
+        exclude module: "play-services-safetynet"
+    }
+    implementation "com.google.firebase:firebase-database"
+    implementation 'com.google.firebase:firebase-config:21.2.0'
+
+    //for progressbar
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
+
+    //for lottie
+    implementation 'com.airbnb.android:lottie:4.2.1'
+
+    //for admob
+    implementation 'com.google.android.gms:play-services-ads:21.3.0'
+}

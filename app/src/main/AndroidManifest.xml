@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.skyncalci">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
+    <application
+        android:name=".ncalc.CalcApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeLight"
+        tools:targetApi="31"
+        android:hardwareAccelerated="true">
+        <activity
+            android:name=".ncalc.calculator.BasicCalculatorActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:hardwareAccelerated="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.APP_CALCULATOR" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ncalc.unitconverter.UnitCategoryActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:label="@string/title_activity_unit_converter_acitvity"
+
+            android:launchMode="singleTask"
+            android:theme="@style/unitconverter"/>
+        <activity android:name=".ncalc.unitconverter.ConverterActivity"
+            android:theme="@style/unitconverter"/>
+        <activity
+            android:name=".ncalc.settings.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".ncalc.geom2d.GeometryDescartesActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+
+            android:label="@string/title_activity_geometry"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ncalc.calculator.LogicCalculatorActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".ncalc.matrix.MatrixCalculatorActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:label="@string/title_activity_matrix_calculator"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".calculator.symja.activities.SolveEquationActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".calculator.symja.activities.SimplifyExpressionActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".calculator.symja.activities.FactorExpressionActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".calculator.symja.activities.DerivativeActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".calculator.symja.activities.ExpandAllExpressionActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".ncalc.graph.GraphActivity"
+            android:label="@string/title_activity_graph" />
+        <activity
+            android:name=".ncalc.graph.GraphAddFunction"
+            android:label="@string/add_function"
+
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".calculator.history.HistoryActivity"
+            android:label="@string/history"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ncalc.systemequations.SystemEquationActivity"
+            android:label="@string/solve_system_equation"
+
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".calculator.symja.activities.LimitActivity"
+            android:label="@string/limit"
+
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".calculator.symja.activities.IntegrateActivity"
+            android:label="@string/integrate"
+
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".calculator.symja.activities.PrimitiveActivity"
+            android:label="@string/primitive"
+
+            android:launchMode="singleTask" />
+        <activity android:name=".ncalc.document.info.InfoActivity" />
+        <activity
+            android:name=".calculator.symja.activities.FactorPrimeActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".calculator.symja.activities.PermutationActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".calculator.symja.activities.ModuleActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".calculator.symja.activities.TrigActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".calculator.symja.activities.TrigActivityReduce"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".calculator.symja.activities.TrigActivityExponent"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".calculator.symja.activities.NumberActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".calculator.symja.activities.PiActivity" />
+        <activity android:name=".ncalc.document.MarkdownDocumentActivity" />
+        <activity
+            android:name=".calculator.symja.activities.IdeActivity"
+            android:label="@string/ide_mode"
+            android:theme="@style/AppThemeLight"/>
+        <activity android:name=".ncalc.document.MarkdownListDocumentActivity"
+            android:hardwareAccelerated="true"/>
+        <activity android:name=".MenuActivity"
+            android:theme="@style/TranslucentAppTheme"/>
+
+        <service android:name=".Floating.SimpleHoverMenu"/>
+
+        <activity android:name="com.razorpay.CheckoutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <data android:host="rzp.io"
+                    android:scheme="io.rzp"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ProPage" />
+        <activity android:name=".calculator.LoginActivity" />
+        <activity android:name=".CustomJavaFiles.NoInternet" />
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".calculator.SignupActivity" />
+        <activity android:name=".Dialog.PasswordResetDialog"
+            android:theme="@style/TranslucentAppTheme"/>
+        <activity android:name=".Dialog.EmailVerificationDialog"
+            android:theme="@style/TranslucentAppTheme"/>
+        <activity android:name=".Dialog.ErrorDialog"
+            android:theme="@style/TranslucentAppTheme"/>
+        <activity android:name=".Dialog.PurchasePlan"
+            android:theme="@style/TranslucentAppTheme"/>
+        <activity android:name=".PrivacyPolicy"
+            android:hardwareAccelerated="true"/>
+        <activity android:name=".Dialog.ContactUsDialog"
+            android:theme="@style/TranslucentAppTheme"/>
+        <activity android:name=".RemoteConfig.AppUpdate"
+            android:theme="@style/TranslucentAppTheme"/>
+        <activity android:name=".RemoteConfig.AppIssue"
+            android:theme="@style/TranslucentAppTheme"/>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_Gul5e0EfevPl6e" />
+
+        <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2496240245984974~8233363298"/>
+    </application>
+
+</manifest>

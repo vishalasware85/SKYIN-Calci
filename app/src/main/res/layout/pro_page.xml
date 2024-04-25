@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_grad">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#2DFFFFFF"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Basic"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="For 30 days"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Rs. 49"
+                                android:textSize="20sp" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/shinecardBasic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                app:cardBackgroundColor="#080F1C"
+                                app:cardCornerRadius="1000dp"
+                                app:cardElevation="0dp">
+
+                                <LinearLayout
+                                    android:id="@+id/shineLayoutBasic"
+                                    android:layout_width="10dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/shine_bg"
+                                    android:orientation="vertical"
+                                    android:rotation="10"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/butBtnBasic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:text="Buy"
+                                    android:textSize="17sp" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#2DFFFFFF"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Silver"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="For 90 days"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/silver"
+                                android:textSize="20sp" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/shinecardSilver"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                app:cardBackgroundColor="#080F1C"
+                                app:cardCornerRadius="1000dp"
+                                app:cardElevation="0dp">
+
+                                <LinearLayout
+                                    android:id="@+id/shineLayoutSilver"
+                                    android:layout_width="10dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/shine_bg"
+                                    android:orientation="vertical"
+                                    android:rotation="10"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/butBtnSilver"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:text="Buy"
+                                    android:textSize="17sp" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#2DFFFFFF"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gold"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="For 180 days"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/gold"
+                                android:textSize="20sp" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/shinecardGold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                app:cardBackgroundColor="#080F1C"
+                                app:cardCornerRadius="1000dp"
+                                app:cardElevation="0dp">
+
+                                <LinearLayout
+                                    android:id="@+id/shineLayoutGold"
+                                    android:layout_width="10dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/shine_bg"
+                                    android:orientation="vertical"
+                                    android:rotation="10"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/butBtnGold"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:text="Buy"
+                                    android:textSize="17sp" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#2DFFFFFF"
+                        app:cardCornerRadius="15dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Platinum"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="For 270 days"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/platinum"
+                                android:textSize="20sp" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/shinecardPlat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                app:cardBackgroundColor="#080F1C"
+                                app:cardCornerRadius="1000dp"
+                                app:cardElevation="0dp">
+
+                                <LinearLayout
+                                    android:id="@+id/shineLayoutPlay"
+                                    android:layout_width="10dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/shine_bg"
+                                    android:orientation="vertical"
+                                    android:rotation="10"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/butBtnPlat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:text="Buy"
+                                    android:textSize="17sp" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    app:cardBackgroundColor="#2DFFFFFF"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ever-Green"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="For 365 days"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/evergreen"
+                            android:textSize="20sp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/shinecard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:cardBackgroundColor="#080F1C"
+                            app:cardCornerRadius="1000dp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:id="@+id/shineLayout"
+                                android:layout_width="10dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/shine_bg"
+                                android:orientation="vertical"
+                                android:rotation="10"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/butBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="40dp"
+                                android:layout_marginBottom="12dp"
+                                android:text="Buy"
+                                android:textSize="17sp" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/accessBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:rotation="90"
+                android:src="@drawable/ic_action_navigation_arrow_back_inverted" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Purchase any plan and get access to"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            app:cardBackgroundColor="#2DFFFFFF"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/backBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_arrow_back_white_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="Upgrade to premium"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
